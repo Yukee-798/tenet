@@ -1,0 +1,30 @@
+{
+  "name": "@tenet/core",
+  "version": "0.1.0",
+  "description": "用于解析 TenetDSL 的核心库",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@formily/antd": "^2.2.19",
+    "@formily/core": "^2.2.19",
+    "@formily/react": "^2.2.19",
+    "@formily/reactive": "^2.2.20",
+    "@formily/reactive-react": "^2.2.20",
+    "antd": "4.22.8",
+    "jsonc-parser": "^3.2.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.28",
+    "rollup": "^3.17.2",
+    "rollup-plugin-delete": "^2.0.0"
+  }
+}

@@ -1,0 +1,102 @@
+import React from 'react';
+import type { IFormProps } from '@formily/core';
+export type DSLNode = {
+    id: string;
+    type: string;
+    state?: Record<string, unknown>;
+    props?: Record<string, unknown>;
+    children?: DSLNode[];
+};
+/** 表示一个完整的 DSL，与 DSLNode 区别在于 DSL 一定是数组类型 */
+export type DSL = DSLNode[];
+export declare const TenetFormNodeTypesToFormilyMap: {
+    'input-text': string;
+    'input-email': string;
+    'input-password': string;
+    'input-number': string;
+    'input-textarea': string;
+    'input-phone': string;
+    select: string;
+    cascader: string;
+    'date-picker': string;
+};
+export declare class TenetFormRenderer {
+    /** 整个应用的生命周期中，内存里面只有一份 dsl */
+    private dsl;
+    private jsonStrParseErrorList;
+    private form;
+    private schema;
+    private parser;
+    private dslTraverser;
+    private defaultUsedFormilyComponents;
+    /** BasicData */
+    private nodeTypes;
+    /** BasicData */
+    private flatNodes;
+    constructor(jsonStr: string, options?: IFormProps);
+    getSchema(): import("@formily/react").Stringify<{
+        [key: symbol]: any;
+        [key: `x-${string}`]: any;
+        [key: `x-${number}`]: any;
+        version?: string;
+        name?: import("@formily/react").SchemaKey;
+        title?: any;
+        description?: any;
+        default?: any;
+        readOnly?: boolean;
+        writeOnly?: boolean;
+        type?: import("@formily/react").SchemaTypes;
+        enum?: import("@formily/react").SchemaEnum<any>;
+        const?: any;
+        multipleOf?: number;
+        maximum?: number;
+        exclusiveMaximum?: number;
+        minimum?: number;
+        exclusiveMinimum?: number;
+        maxLength?: number;
+        minLength?: number;
+        pattern?: string | RegExp;
+        maxItems?: number;
+        minItems?: number;
+        uniqueItems?: boolean;
+        maxProperties?: number;
+        minProperties?: number;
+        required?: string | boolean | string[];
+        format?: string;
+        $ref?: string;
+        $namespace?: string;
+        definitions?: import("@formily/react").SchemaProperties<any, any, any, any, any, any, any, any>;
+        properties?: import("@formily/react").SchemaProperties<any, any, any, any, any, any, any, any>;
+        items?: import("@formily/react").SchemaItems<any, any, any, any, any, any, any, any>;
+        additionalItems?: import("@formily/react").Stringify<any>;
+        patternProperties?: import("@formily/react").SchemaProperties<any, any, any, any, any, any, any, any>;
+        additionalProperties?: import("@formily/react").Stringify<any>;
+        "x-value"?: any;
+        "x-index"?: number;
+        "x-pattern"?: any;
+        "x-display"?: any;
+        "x-validator"?: any;
+        "x-decorator"?: any;
+        "x-decorator-props"?: any;
+        "x-component"?: any;
+        "x-component-props"?: any;
+        "x-reactions"?: import("@formily/react").SchemaReactions<any>;
+        "x-content"?: any;
+        "x-data"?: any;
+        "x-visible"?: boolean;
+        "x-hidden"?: boolean;
+        "x-disabled"?: boolean;
+        "x-editable"?: boolean;
+        "x-read-only"?: boolean;
+        "x-read-pretty"?: boolean;
+        "x-compile-omitted"?: string[];
+    }>;
+    updateBasicData(): void;
+    getNodeTypes(): string[];
+    getFlatNodes(): DSLNode[];
+    transformTenetDSLToFormilySchema(): void;
+    private initFormValuesByDSLState;
+    private getUsedFormilyComponents;
+    private createFormilySchemaField;
+    render(): Promise<React.FunctionComponentElement<import("antd").CardProps & React.RefAttributes<HTMLDivElement>>>;
+}

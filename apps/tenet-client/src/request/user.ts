@@ -1,0 +1,1 @@
+export const getUserInfo = async (id: string) => {};

@@ -1,0 +1,31 @@
+{
+  "name": "@tenet/editor",
+  "version": "0.1.0",
+  "description": "TENET 的整个可视化编辑器，包含待拖拽的组件、JSON 编辑器、画布、配置页面等。",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "antd": "4.22.8",
+    "react": "^18.2.0",
+    "zustand": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@types/react": "^18.0.28",
+    "rollup": "^3.17.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
