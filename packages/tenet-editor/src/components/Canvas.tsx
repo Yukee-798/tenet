@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 export interface CanvasProps {
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 const Canvas: React.FC<CanvasProps> = (props) => {
-  const {} = props
+  const { children } = props;
 
-  return (
-    <div>
-    </div>
-  )
-}
+  return <div>{children}</div>;
+};
 
-export default Canvas
+export default Canvas;

@@ -1,14 +1,58 @@
-import React, { useState, useEffect } from "react";
-import SideTabBar from "./src/components/SideTabBar";
+import React, { useEffect, useState } from 'react';
+import { Layout } from 'antd';
+import { TenetFormRenderer } from '@tenet/core';
+import useBoundStore from './src/store';
+import LeftSideBar from './src/components/LeftSideBar';
+import Canvas from './src/components/Canvas';
+import './index.css';
 
-export interface indexProps {}
+const { Header, Content } = Layout;
 
-export const TenetEditor: React.FC<indexProps> = (props) => {
-  const {} = props;
+const RenderContent = (props: any) => {
+  const [element, setElement] = useState(<div>loading</div>);
+  useEffect(() => {
+    const renderer = new TenetFormRenderer(props.jsonStr);
+    renderer.render().then((res) => {
+      setElement(res as JSX.Element);
+    });
+    // .catch((err) => {});
+  }, [props.jsonStr]);
+  return element;
+};
+
+const TenetEditor: React.FC = () => {
+  const { jsonStr } = useBoundStore((store) => ({
+    jsonStr: store.jsonStr,
+  }));
 
   return (
-    <div>
-      <SideTabBar />
+    <div className="tenet-editor">
+      <Layout>
+        <Header className="header">
+          <div className="logo" />
+        </Header>
+        <Layout>
+          <LeftSideBar />
+          <Layout>
+            <Content
+              style={{
+                padding: 24,
+                margin: 0,
+                minHeight: 280,
+              }}
+            >
+              <Canvas>
+                122222123
+                {/* <React.Suspense fallback={<div>loading...</div>}>{parse(dsl)}</React.Suspense> */}
+                <RenderContent jsonStr={jsonStr} />
+                {/* <FormilyDemo /> */}
+              </Canvas>
+            </Content>
+          </Layout>
+        </Layout>
+      </Layout>
     </div>
   );
 };
+
+export default TenetEditor;

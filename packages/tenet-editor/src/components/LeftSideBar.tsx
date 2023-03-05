@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Layout, Menu } from "antd";
-import type { MenuProps } from "antd";
-import { AppstoreAddOutlined, BarsOutlined, CodeOutlined } from "@ant-design/icons";
-import SideBarToggle from "./SideBarToggle";
-import LeftSideContentContainer from "./LeftSideContentContainer";
-import JSONEditor from "./JSONEditor";
-import useBoundStore from "../../store";
+import React, { useState, useEffect } from 'react';
+import { Layout, Menu } from 'antd';
+import { AppstoreAddOutlined, BarsOutlined, CodeOutlined } from '@ant-design/icons';
+import useBoundStore from '../../src/store';
+import SideBarToggle from './SideBarToggle';
+import LeftSideContentContainer from './LeftSideContentContainer';
+import JSONEditor from './JSONEditor';
+import type { MenuProps } from 'antd';
 
 const { Sider } = Layout;
 
-const items: MenuProps["items"] = [AppstoreAddOutlined, BarsOutlined, CodeOutlined].map(
+const items: MenuProps['items'] = [AppstoreAddOutlined, BarsOutlined, CodeOutlined].map(
   (icon, index) => {
     const key = String(index + 1);
     return {
@@ -20,15 +20,15 @@ const items: MenuProps["items"] = [AppstoreAddOutlined, BarsOutlined, CodeOutlin
 );
 
 export enum MenuItemKey {
-  ComponentStore = "1",
-  PageOutline = "2",
-  JSONEditor = "3",
+  ComponentStore = '1',
+  PageOutline = '2',
+  JSONEditor = '3',
 }
 
 const SideContentTitles = {
-  [MenuItemKey.ComponentStore]: "组件",
-  [MenuItemKey.PageOutline]: "大纲",
-  [MenuItemKey.JSONEditor]: "JSON",
+  [MenuItemKey.ComponentStore]: '组件',
+  [MenuItemKey.PageOutline]: '大纲',
+  [MenuItemKey.JSONEditor]: 'JSON',
 };
 
 const LeftSideBarContentWidth = 554;

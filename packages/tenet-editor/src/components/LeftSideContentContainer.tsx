@@ -1,5 +1,5 @@
-import { Card } from "antd";
-import React, { useState, useEffect, Children } from "react";
+import { Card } from 'antd';
+import React, { useState, useEffect, Children } from 'react';
 
 export interface LeftSideContentContainerProps {
   title?: string;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 export interface SideBarToggleProps {
   toggle?: boolean;
@@ -13,7 +13,7 @@ const SideBarToggle: React.FC<SideBarToggleProps> = (props) => {
       className="t-flex t-items-center t-w-3 t-h-12 t-absolute -t-right-2 t-top-1/2 t-rounded-r-2xl t-bg-white t-select-none t-cursor-pointer"
       onClick={() => onClick?.()}
     >
-      {toggle ? "<" : ">"}
+      {toggle ? '<' : '>'}
     </div>
   );
 };
