@@ -2,7 +2,7 @@
   "name": "@tenet/editor",
   "version": "0.1.0",
   "description": "TENET 的整个可视化编辑器，包含待拖拽的组件、JSON 编辑器、画布、配置页面等。",
-  "main": "dist/index.js",
+  "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"

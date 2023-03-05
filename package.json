@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "client:dev": "pnpm --filer @tenet/client run dev",
-    "server:dev": "pnpm --filer @tenet/server run dev",
-    "dev": "npm-run-all --parallel client:dev server:dev"
+    "client:dev": "npm-run-all @tenet/client:dev"
   },
   "keywords": [],
   "author": "",

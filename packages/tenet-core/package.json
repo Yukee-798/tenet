@@ -2,7 +2,7 @@
   "name": "@tenet/core",
   "version": "0.1.0",
   "description": "用于解析 TenetDSL 的核心库",
-  "main": "dist/index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup --config rollup.config.ts --configPlugin typescript"
