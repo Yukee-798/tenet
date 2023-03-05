@@ -1,20 +1,4 @@
 {
-  "compilerOptions": {
-    "target": "es5", // 目标 ECMAScript 版本
-    "module": "es6", // 输出模块格式
-    "lib": ["es6", "dom"], // 引入的类型定义文件
-    "jsx": "react", // 支持的 JSX 语法
-    "declaration": true, // 是否生成类型声明文件
-    "declarationDir": "./types", // 类型声明文件输出目录
-    "sourceMap": true, // 是否生成源映射文件
-    "moduleResolution": "Node",
-    "outDir": "dist", // 编译输出目录
-    "strict": false, // 开启严格模式
-    "noImplicitAny": false, // 禁止隐式 any 类型
-    "esModuleInterop": true, // 支持 commonjs 模块和 ES6 模块的互相导入
-    "skipLibCheck": true, // 不检查引入的声明文件
-    "forceConsistentCasingInFileNames": true // 强制文件名大小写一致
-  },
-  "include": ["."], // 包含的文件目录
-  "exclude": ["node_modules", "**/*.spec.ts"] // 排除的文件目录
+  "extends": "../../tsconfig.react.json",
+  "include": ["src", "index.tsx", "rollup.config.ts"] // 包含的文件目录
 }

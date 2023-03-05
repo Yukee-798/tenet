@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "strict": false,
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "strict": false,
     "module": "ESNext",
     "moduleResolution": "Node",
     "declaration": true, // 是否生成类型声明文件
