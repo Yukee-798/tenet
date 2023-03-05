@@ -214,7 +214,8 @@ export class TenetFormRenderer {
     });
   }
 
-  async render() {
+  // @ts-ignore
+  async render(): Promise<JSX.Element> {
     console.log('执行 render');
     const SchemaField = await this.createFormilySchemaField();
 
