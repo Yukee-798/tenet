@@ -24,6 +24,5 @@ module.exports = {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
       },
     ],
-    '@typescript-eslint/ban-ts-comment': 'off',
   },
 };
