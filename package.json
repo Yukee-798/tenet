@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
+    "@tenet/core:build": "pnpm --filter @tenet/core run build",
+    "@tenet/editor:build": "pnpm --filter @tenet/editor run build",
     "client:dev": "npm-run-all @tenet/client:dev"
   },
   "keywords": [],

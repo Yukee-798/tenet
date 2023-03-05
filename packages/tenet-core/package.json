@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
+    "build-watch": "rollup --config rollup.config.ts --configPlugin typescript --watch"
   },
   "keywords": [],
   "author": "",
