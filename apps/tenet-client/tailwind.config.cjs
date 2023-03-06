@@ -1,11 +1,14 @@
 /** @type {import("tailwindcss").Config} */
-// eslint-disable-next-line no-undef
 module.exports = {
   prefix: 't-',
   corePlugins: {
     preflight: false,
   },
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@tenet/editor/**/*.{jsx,tsx}',
+  ],
   theme: {
     extend: {},
   },
