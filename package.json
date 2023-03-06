@@ -5,7 +5,8 @@
   "scripts": {
     "@tenet/core:build": "pnpm --filter @tenet/core run build",
     "@tenet/editor:build": "pnpm --filter @tenet/editor run build",
-    "client:dev": "npm-run-all @tenet/client:dev"
+    "@tenet/client:dev": "pnpm --filter @tenet/client run dev",
+    "client:dev": "pnpm run @tenet/client:dev "
   },
   "keywords": [],
   "author": "",
