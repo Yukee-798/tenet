@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "./"
+    },
+    {
+      "name": "tenet-client",
+      "path": "./apps/tenet-client"
+    },
+    {
+      "name": "tenet-server",
+      "path": "./apps/tenet-server"
+    },
+    {
+      "name": "tenet-ui",
+      "path": "./packages/tenet-ui"
+    },
+    {
+      "name": "tenet-core",
+      "path": "./packages/tenet-core"
+    },
+    {
+      "name": "tenet-editor",
+      "path": "./packages/tenet-editor"
+    }
+  ]
+}
