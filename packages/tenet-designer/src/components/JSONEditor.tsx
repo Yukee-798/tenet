@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import { EditorState } from "@codemirror/state";
-import { EditorView, basicSetup } from "codemirror";
-import { keymap } from "@codemirror/view";
-import { defaultKeymap } from "@codemirror/commands";
-import { json } from "@codemirror/lang-json";
-import { parse } from "jsonc-parser";
-import { debounce } from "lodash";
+import React, { useState, useEffect, useRef } from 'react';
+import { EditorState } from '@codemirror/state';
+import { EditorView, basicSetup } from 'codemirror';
+import { keymap } from '@codemirror/view';
+import { defaultKeymap } from '@codemirror/commands';
+import { json } from '@codemirror/lang-json';
+import { parse } from 'jsonc-parser';
+import { debounce } from 'lodash';
 
 export interface JSONEditorProps {
   /* 默认值必须传入一个对象 */

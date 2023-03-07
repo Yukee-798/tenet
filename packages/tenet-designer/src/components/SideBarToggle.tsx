@@ -10,7 +10,7 @@ const SideBarToggle: React.FC<SideBarToggleProps> = (props) => {
 
   return (
     <div
-      className="t-flex t-items-center t-w-3 t-h-12 t-absolute -t-right-2 t-top-1/2 t-rounded-r-2xl t-bg-white t-select-none t-cursor-pointer"
+      className="t-absolute -t-right-2 t-top-1/2 t-flex t-h-12 t-w-3 t-cursor-pointer t-select-none t-items-center t-rounded-r-2xl t-bg-white"
       onClick={() => onClick?.()}
     >
       {toggle ? '<' : '>'}

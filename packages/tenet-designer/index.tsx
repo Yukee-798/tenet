@@ -20,13 +20,13 @@ const RenderContent = (props: any) => {
   return element;
 };
 
-const TenetEditor: React.FC = () => {
+const TenetDesigner: React.FC = () => {
   const { jsonStr } = useBoundStore((store) => ({
     jsonStr: store.jsonStr,
   }));
 
   return (
-    <div className="tenet-editor">
+    <div className="tenet-designer">
       <Layout>
         <Header className="header">
           <div className="logo" />
@@ -42,7 +42,6 @@ const TenetEditor: React.FC = () => {
               }}
             >
               <Canvas>
-                122222123
                 {/* <React.Suspense fallback={<div>loading...</div>}>{parse(dsl)}</React.Suspense> */}
                 <RenderContent jsonStr={jsonStr} />
                 {/* <FormilyDemo /> */}
@@ -55,4 +54,4 @@ const TenetEditor: React.FC = () => {
   );
 };
 
-export default TenetEditor;
+export default TenetDesigner;

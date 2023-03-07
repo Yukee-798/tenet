@@ -1,0 +1,21 @@
+/* TODO: dev 环境下这里如果使用 ~react-grid-layout/css/styles.css 会被解析为 tenet-client/node_modules/react-grid-layout/css/styles.css */
+@import './node_modules/react-grid-layout/css/styles.css';
+@import './node_modules/react-resizable/css/styles.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tenet-designer,
+.ant-layout {
+  height: 100%;
+}
+.ant-layout-sider-children {
+  display: flex;
+}
+.ant-card-head {
+}
+.ant-card-body {
+  height: calc(100% - 58.16px);
+  padding: 1px;
+  overflow: auto;
+}

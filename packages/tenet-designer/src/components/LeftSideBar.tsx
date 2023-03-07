@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Menu } from 'antd';
 import { AppstoreAddOutlined, BarsOutlined, CodeOutlined } from '@ant-design/icons';
-import useBoundStore from '../../src/store';
+import useBoundStore from '../store';
 import SideBarToggle from './SideBarToggle';
 import LeftSideContentContainer from './LeftSideContentContainer';
 import JSONEditor from './JSONEditor';
@@ -69,7 +69,7 @@ const LeftSideBar: React.FC /* <LeftSideBarProps> */ = (props) => {
       width={isSideBarToggle ? LeftSideBarContentWidth : LeftSideBarWith}
     >
       <Menu
-        className="t-w-16 t-h-full t-border-r-0"
+        className="t-h-full t-w-16 t-border-r-0"
         mode="inline"
         defaultSelectedKeys={[MenuItemKey.ComponentStore]}
         defaultOpenKeys={[MenuItemKey.ComponentStore]}

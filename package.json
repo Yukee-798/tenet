@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "@tenet/core:build": "pnpm --filter @tenet/core run build",
-    "@tenet/editor:build": "pnpm --filter @tenet/editor run build",
+    "@tenet/designer:build": "pnpm --filter @tenet/designer run build",
     "@tenet/client:dev": "pnpm --filter @tenet/client run dev",
     "client:dev": "pnpm run @tenet/client:dev "
   },

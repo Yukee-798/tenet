@@ -10,7 +10,7 @@ const LeftSideContentContainer: React.FC<LeftSideContentContainerProps> = (props
   const { title, children } = props;
 
   return (
-    <Card className="t-flex-1 t-min-w-0 t-rounded-none" title={title}>
+    <Card className="t-min-w-0 t-flex-1 t-rounded-none" title={title}>
       {children}
     </Card>
   );
