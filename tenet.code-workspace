@@ -21,8 +21,8 @@
       "path": "./packages/tenet-core"
     },
     {
-      "name": "tenet-editor",
-      "path": "./packages/tenet-editor"
+      "name": "tenet-designer",
+      "path": "./packages/tenet-designer"
     }
   ]
 }
