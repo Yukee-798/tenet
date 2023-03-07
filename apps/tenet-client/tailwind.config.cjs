@@ -7,7 +7,7 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@tenet/editor/**/*.{jsx,tsx}',
+    './node_modules/@tenet/designer/**/*.{jsx,tsx}',
   ],
   theme: {
     extend: {},

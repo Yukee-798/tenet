@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import TenetEditor from '@tenet/editor';
+import TenetDesigner from '@tenet/designer';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <TenetEditor />
+      <TenetDesigner />
     </div>
   );
 };
